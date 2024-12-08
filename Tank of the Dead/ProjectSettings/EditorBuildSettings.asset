@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/__Scenes/Main.unity
+    guid: ae9c73e92dcfed247b70d4ecea504d0c
+  - enabled: 1
+    path: Assets/__Scenes/Infinite Round.unity
+    guid: aa0487710263b6f47b040adbcc71903c
+  - enabled: 1
+    path: Assets/__Scenes/Town lvl 1.unity
+    guid: 98ec821bb61114844b309dac441c1874
   m_configObjects: {}

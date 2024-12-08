@@ -93,6 +93,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4802584468170832}
   - component: {fileID: 205912947399114846}
+  - component: {fileID: -7436155029267931789}
+  - component: {fileID: -6807869447076084959}
+  - component: {fileID: 6064722920744708527}
+  - component: {fileID: 786850924228089025}
   m_Layer: 0
   m_Name: Rubble_Big_Sample
   m_TagString: Untagged
@@ -150,6 +154,88 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23725533679437818}
   m_Enabled: 1
+--- !u!65 &-7436155029267931789
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278830948007620}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 4, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-6807869447076084959
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278830948007620}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6064722920744708527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278830948007620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2357bbbeed4a9e248bf31040f677ccd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotsToDestroy: 3
+  zombiePrefab: {fileID: 919132149155446097, guid: e88b81dbbde6e97419fd1f6bdc41d4ca,
+    type: 3}
+  projectileComponentName: Bullet_Nav_CS
+  zombieSpawner: {fileID: 0}
+--- !u!114 &786850924228089025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278830948007620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7cbb9c0571d2d428b9cb98e70c6fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiePrefab: {fileID: 919132149155446097, guid: e88b81dbbde6e97419fd1f6bdc41d4ca,
+    type: 3}
+  spawnInterval: 2
+  zombiesPerSpawn: 2
+  spawnRadius: 1
 --- !u!1 &1574302351328626
 GameObject:
   m_ObjectHideFlags: 0
