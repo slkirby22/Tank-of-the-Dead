@@ -32,10 +32,30 @@ namespace ChobiAssets.KTP
         GameObject dyingObject;
         bool isDead;
 
+        public PlayerHealth playerHealth;
+
 
         void Start()
         {
             Initialize();
+
+            if (playerHealth == null)
+            {
+                GameObject tankPlayer = GameObject.Find("SD_Firefly_2.0_Player");
+
+                if (tankPlayer != null)
+                {
+                    playerHealth = tankPlayer.transform.Find("MainBody").GetComponent<PlayerHealth>();
+                    if (playerHealth == null)
+                    {
+                        Debug.LogError("playerHealth component not assigned.");
+                    }
+                }
+                else
+                {
+                    Debug.LogError("SD_Firefly_2.0_Player not found");
+                }
+            }
         }
 
 
@@ -151,6 +171,9 @@ namespace ChobiAssets.KTP
 
             // Send message to all the parts.
             transform.root.BroadcastMessage("Destroyed_Linkage", SendMessageOptions.DontRequireReceiver);
+
+            Debug.Log("Calling PlayerDie()");
+            playerHealth.PlayerDie();
         }
 
 
